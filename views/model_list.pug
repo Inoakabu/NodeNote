@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1 = title
+
+    ul
+    each Model in model_list
+        li
+        a(href=Model.url)#{model.title}
+        |   (#{Model.title})
+
+    else
+        li no notes.
